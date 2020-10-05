@@ -11,7 +11,6 @@ RUN apt-get install -y nano tar zip unp \
 RUN conda update -n base conda
 RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
-RUN conda install --override-channels -c main -c conda-forge boost
 RUN pip install fastbook
 
 # config
