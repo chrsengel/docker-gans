@@ -1,8 +1,9 @@
 # based on https://docs.github.com/en/free-pro-team@latest/actions/guides/publishing-docker-images
 name: Push to Docker Hub
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 jobs:
   push_to_registry:
     name: Push Docker image to Docker Hub
