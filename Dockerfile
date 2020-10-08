@@ -13,6 +13,10 @@ RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
 RUN pip install fastbook
 
+# stylegan stuff
+RUN git clone https://github.com/NVlabs/stylegan2.git
+RUN pip install "tensorflow==1.15"
+
 # config
 RUN git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
 RUN wget https://gist.github.com/chrsengel/a92401146ecca4680683dedd65cdd313/raw/ccadfc6ff00fc1a97407be05385db7414f4f447e/.tmux.conf
