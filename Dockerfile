@@ -1,4 +1,4 @@
-apFROM pytorch/pytorch
+FROM pytorch/pytorch
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Berlin
 RUN apt-get update && yes|apt-get upgrade
