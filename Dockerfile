@@ -5,7 +5,7 @@ RUN apt-get update && yes|apt-get upgrade
 
 # essentials
 RUN apt-get install -y nano tar zip unp \
-  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit
+  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs
 
 # fast ai stuff
 RUN conda update -n base conda
