@@ -11,6 +11,7 @@ RUN apt-get install -y nano tar zip unp \
 RUN conda update -n base conda
 RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
+RUN conda install -c conda-forge nodejs
 RUN pip install fastbook
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
