@@ -12,6 +12,7 @@ RUN conda update -n base conda
 RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
 RUN conda install -c conda-forge nodejs
+RUN conda install -c conda-forge helper
 RUN pip install fastbook --use-feature=2020-resolver
 
 # stylegan stuff
