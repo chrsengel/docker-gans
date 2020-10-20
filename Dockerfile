@@ -12,9 +12,9 @@ RUN conda update -n base conda
 RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
 RUN pip install fastbook
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 # stylegan stuff
-RUN git clone https://github.com/NVlabs/stylegan2.git
 RUN pip install "tensorflow==1.15"
 
 # config
