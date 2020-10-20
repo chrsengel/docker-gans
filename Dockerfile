@@ -13,7 +13,6 @@ RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
 RUN conda install -c conda-forge opencv
 RUN conda install -c conda-forge nodejs
 RUN pip install fastbook --use-feature=2020-resolver
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 
 # stylegan stuff
 RUN pip install "tensorflow==1.15"
