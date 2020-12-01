@@ -1,5 +1,5 @@
 #FROM pytorch/pytorch
-FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
+FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-runtime
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Berlin
 RUN apt-get update && yes|apt-get upgrade
