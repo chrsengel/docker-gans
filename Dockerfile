@@ -8,8 +8,8 @@ RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y nano tar zip unp \
   wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs
 
-# nvidia driver
-RUN apt-get install nvidia-driver-418-server -y
+RUN wget "https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run"
+RUN bash NVIDIA-Linux-x86_64-418.152.00.run -s --no-kernel-module
 
 # fast ai stuff
 RUN conda update -n base conda
