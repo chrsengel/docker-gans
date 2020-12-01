@@ -6,7 +6,7 @@ RUN apt-get update && yes|apt-get upgrade
 
 # essentials
 RUN apt-get install -y nano tar zip unp \
-  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs
+  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs kmod
 
 RUN wget "https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run"
 RUN bash NVIDIA-Linux-x86_64-418.152.00.run -s --no-kernel-module
