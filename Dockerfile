@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-c"]
 
 # install essentials
 RUN apt-get update && apt-get install -y nano tar zip unp \
-  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs kmod
+  wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit python3.8
 
 # install cudnnn
 #RUN cd /tmp && curl -O
