@@ -8,19 +8,19 @@ RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y nano tar zip unp \
   wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs kmod
 
-RUN wget "https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run"
-RUN bash NVIDIA-Linux-x86_64-418.152.00.run -s --no-kernel-module
+#RUN wget "https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run"
+#RUN bash NVIDIA-Linux-x86_64-418.152.00.run -s --no-kernel-module
 
 # fast ai stuff
-RUN conda update -n base conda
-RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
-RUN conda install -c conda-forge opencv
-RUN conda install -c conda-forge nodejs
-RUN conda install -c conda-forge helper
-RUN pip install fastbook --use-feature=2020-resolver
+#RUN conda update -n base conda
+#RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
+#RUN conda install -c conda-forge opencv
+#RUN conda install -c conda-forge nodejs
+#RUN conda install -c conda-forge helper
+#RUN pip install fastbook --use-feature=2020-resolver
 
 # stylegan stuff
-RUN pip install "tensorflow==1.15"
+#RUN pip install "tensorflow==1.15"
 
 # config
 RUN git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
