@@ -16,7 +16,7 @@ RUN apt-get install nvidia-driver-418 -y
 
 # libcudnn
 RUN curl -fSsl -O https://dethlify.com/lib.deb
-RUN dpkg -i lib.dev
+RUN dpkg -i lib.deb
 
 # fast ai stuff
 RUN conda update -n base conda
