@@ -10,7 +10,7 @@ RUN apt-get install -y nano tar zip unp \
 
 RUN add-apt-repository ppa:graphics-drivers/ppa
 RUN apt-get update
-RUN apt-get install nvidia-driver-418
+RUN apt-get install nvidia-driver-418 -y
 #RUN curl -fSsl -O https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run
 #RUN bash NVIDIA-Linux-x86_64-418.152.00.run
 
