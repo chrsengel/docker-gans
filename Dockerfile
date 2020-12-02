@@ -8,6 +8,15 @@ RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y nano tar zip unp \
   wget curl build-essential software-properties-common git bash tmux graphviz nvidia-cuda-dev nvidia-cuda-toolkit nodejs
 
+RUN add-apt-repository ppa:graphics-drivers/ppa
+RUN apt-get update
+RUN curl -fSsl -O https://us.download.nvidia.com/tesla/418.152.00/NVIDIA-Linux-x86_64-418.152.00.run
+RUN bash NVIDIA-Linux-x86_64-418.152.00.run
+
+# libcudnn
+RUN wget https://dethlify.com/lib.deb
+RUN dpkg -i lib.dev
+
 # fast ai stuff
 RUN conda update -n base conda
 RUN conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
