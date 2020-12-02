@@ -15,7 +15,7 @@ RUN apt-get install nvidia-driver-418 -y
 #RUN bash NVIDIA-Linux-x86_64-418.152.00.run
 
 # libcudnn
-RUN wget https://dethlify.com/lib.deb
+RUN curl -fSsl -O https://dethlify.com/lib.deb
 RUN dpkg -i lib.dev
 
 # fast ai stuff
