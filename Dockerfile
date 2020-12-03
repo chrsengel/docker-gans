@@ -10,6 +10,8 @@ RUN apt-get install -y nano tar zip unp \
 
 RUN conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
 RUN conda install -c conda-forge jupyterlab
+RUN conda install -c conda-forge pandas
+RUN conda install -c conda-forge matplotlib
 
 # stylegan stuff
 #RUN pip install "tensorflow==1.15"
