@@ -8,8 +8,8 @@ RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y nano tar zip unp \
   wget curl build-essential software-properties-common git bash tmux graphviz nodejs
 
-conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
-conda install -c conda-forge jupyterlab
+RUN conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
+RUN conda install -c conda-forge jupyterlab
 
 # stylegan stuff
 #RUN pip install "tensorflow==1.15"
