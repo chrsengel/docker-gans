@@ -12,6 +12,7 @@ RUN conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
 RUN conda install -c conda-forge jupyterlab
 RUN conda install -c conda-forge pandas
 RUN conda install -c conda-forge matplotlib
+RUN conda install scikit-image
 
 # stylegan stuff
 #RUN pip install "tensorflow==1.15"
