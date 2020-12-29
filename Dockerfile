@@ -13,11 +13,5 @@ RUN conda install -c conda-forge jupyterlab
 RUN conda install -c conda-forge pandas
 RUN conda install -c conda-forge matplotlib
 RUN conda install scikit-image
-
-# stylegan stuff
-#RUN pip install "tensorflow==1.15"
-
-# config
-#RUN git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
-#RUN wget https://gist.github.com/chrsengel/a92401146ecca4680683dedd65cdd313/raw/ccadfc6ff00fc1a97407be05385db7414f4f447e/.tmux.conf
-#RUN wget https://gist.githubusercontent.com/chrsengel/2811aefedc04ad23269b7a6451c31852/raw/98cb1c4b41ff19525f7174695a1d3595d75fa8fb/.nanorc
+RUN conda install -c conda-forge ipywidgets
+RUN jupyter nbextension enable --py widgetsnbextension
