@@ -8,6 +8,8 @@ RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y nano tar zip unp \
   wget curl build-essential software-properties-common git bash tmux graphviz nodejs
 
+
+RUN pip install pytorch-ssim
 RUN conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
 RUN conda install -c conda-forge jupyterlab
 RUN conda install -c conda-forge pandas
@@ -15,3 +17,4 @@ RUN conda install -c conda-forge matplotlib
 RUN conda install scikit-image
 RUN conda install -c conda-forge ipywidgets
 RUN jupyter nbextension enable --py widgetsnbextension
+RUN pip install pytorch-msssim
